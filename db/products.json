@@ -1,0 +1,21 @@
+[
+  {
+    "id": "nlhplo",
+    "title": "Arduino Uno",
+    "description": "placa desarrollo",
+    "category": "electronica",
+    "code": "ABC123",
+    "price": 6000,
+    "stock": 1
+  },
+  {
+    "id": "uq7o7b",
+    "title": "Nodemcu Esp 32",
+    "description": "placa de desarrollo",
+    "category": "Electronica",
+    "code": "ABC234",
+    "price": 5000,
+    "stock": 3
+  }
+  
+]

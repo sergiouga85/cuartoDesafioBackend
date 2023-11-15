@@ -28,13 +28,13 @@ const ioServer= new IOServer(server)
 
 ioServer.on('connection', socket => {
     
-    console.log('cliente conectado', socket.id)
-    socket.emit ('actualizacion', {productos: pm.getAll()}) 
+    console.log('connected client', socket.id)
+    socket.emit ('update', {productos: pm.getAll()}) 
     
-    socket.on('agregarProducto', async (producto, callback) => {
+    socket.on('addProduct', async (producto, callback) => {
         const respuesta = await pm.addProducts(producto)
         callback({status: respuesta}) 
-        ioServer.sockets.emit('actualizacion', {productos: pm.getAll()})
+        ioServer.sockets.emit('update', {productos: pm.getAll()})
          
     })
 

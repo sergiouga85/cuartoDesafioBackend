@@ -11,9 +11,11 @@ try {
     const stock= document.querySelector('#stock').value
     
 
-    // Verifica que todos los campos contengan datos
-    if (!title || !description || !category || !code || !price|| !stock) throw new Error('Todos los campos son obligatorios')
-    // Crea un objeto de salida con los valores de los campos
+    
+    if (!title || !description || !category || !code || !price|| !stock) {
+        throw new Error('Todos los campos son obligatorios')
+    }
+    
     const nuevoProducto = {
       title: title,
       description: description,
@@ -23,10 +25,15 @@ try {
       stock: parseInt(stock)
       
     }
-    // Envia al servidor el producto agregado y recibe un callback con la respuesta
     
-        socket.emit('agregarProducto', nuevoProducto, (res) => {
+    
+        socket.emit('addProduct', nuevoProducto, (res) => {
             if (res.status.status === 'Ok') {
+                Swal.fire({
+                    title: "Producto agregado!",
+                    icon: "success",
+                    color: "write"
+                  });
                 console.log('El producto fue agregado correctamente')
                 document.querySelector('#titulo').value = ''
                 document.querySelector('#descripcion').value = ''
@@ -40,14 +47,21 @@ try {
 
         })
     }catch(error){
+
         console.log('El producto no fue agregado')
+        Swal.fire({
+            
+            icon: "error",
+            title: "Oops...",
+            text: "El producto no fue agregado!"
+          });
     }  
            
 })
     
 
-// Maneja el evento ACTUALIZACIÓN que se dispara cuando algún cliente crea un nuevo producto, o cuando se conecta
-socket.on('actualizacion', async ({productos}) => {
+
+socket.on('update', async ({productos}) => {
     console.log(productos)
     const tabla = document.querySelector('#productsTable')
     tabla.innerHTML = ''

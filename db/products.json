@@ -16,6 +16,41 @@
     "code": "ABC234",
     "price": 5000,
     "stock": 3
+  },
+  {
+    "id": "mrnpn5",
+    "title": "Fuente Alimentacion Gadnic",
+    "description": "fuente de alimentacion de laboratorio de 0 a 30 v y 0-5A",
+    "category": "Electrónica",
+    "code": "ABC456",
+    "price": 5000,
+    "stock": 2
+  },
+  {
+    "id": "msviig",
+    "title": "Estacion de soldado Gadnic ",
+    "description": "Estacion de soldado para componentes SMD",
+    "category": "Electrónica",
+    "code": "ABC345",
+    "price": 100000,
+    "stock": 2
+  },
+  {
+    "id": "0cjtg",
+    "title": "Multimetro Digital Proskit",
+    "description": "Tester multimetro digital Proskit",
+    "category": "Instumental Electrónica",
+    "code": "ABC367",
+    "price": 50000,
+    "stock": 1
+  },
+  {
+    "id": "mbza5",
+    "title": "Kit de destornilladores Perilleros Pro'sKit",
+    "description": "Destornilladores perilleros Electrónica",
+    "category": "Electrónica/Electricidad",
+    "code": "ACD567",
+    "price": 15000,
+    "stock": 5
   }
-  
 ]

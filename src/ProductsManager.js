@@ -40,10 +40,6 @@ export class ProductsManager{
         return this.products
     }
         
-    /**
-     * Agrega un producto enviado por el usuario al array
-     * @param {object} prod 
-     */
 
     async addProducts(prod){
     
